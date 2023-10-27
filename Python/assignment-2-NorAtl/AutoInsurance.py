@@ -2,7 +2,7 @@
 # Student Name:   Christopher Jones 
 # Program Title:  Auto Insurance
 # Description:    Compute monthly insurance cost
-# """
+# """ ready for grading
 
 def main(): 
 
