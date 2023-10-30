@@ -14,8 +14,16 @@ def getDiscountPercentage(in_original_price):
         discount_percentage = 35
     else: #over 599 - 50% discount
         discount_percentage = 50
+        
     return discount_percentage
 
+def getTotalPrice(in_original_price, in_tax):
+    discount_amount = getDiscountPercentage(in_original_price)/100 * in_original_price
+    tax_amount = in_tax/100 * (in_original_price - discount_amount)
+    total_price = in_original_price - discount_amount + tax_amount
+
+    return f'Total before taxes: ${in_original_price:.2f}' \
+    
 
 
 def main():
@@ -41,9 +49,9 @@ def main():
     # else: #over 599 - 50% discount
     #     discount_percentage = 50
 
-    discount_amount = getDiscountPercentage(original_price)/100 * original_price
-    tax_amount = tax/100 * (original_price - discount_amount)
-    total_price = original_price - discount_amount + tax_amount
+    # discount_amount = getDiscountPercentage(original_price)/100 * original_price
+    # tax_amount = tax/100 * (original_price - discount_amount)
+    # total_price = original_price - discount_amount + tax_amount
 
     print(f"Total (before taxes): ${original_price:,.2f} \
 \nDiscount Percentage: {discount_percentage}%\
