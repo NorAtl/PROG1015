@@ -14,7 +14,7 @@ def draw():
 
 def main():
 
-    for square in range(4): #0,1,2,3
+    for square in range(4): #[0,1,2,3]
         draw()
 
     # turtle.forward(100)
@@ -29,7 +29,7 @@ def main():
     # turtle.forward(100)
     # turtle.right(90)
 
-    # turtle.done()
+    turtle.done()
 
 
 if __name__ == "__main__":
