@@ -9,7 +9,7 @@
 #leap year == divisible by 4 but not 100
 
 def checkLeapYear(in_year):
-    return(in_year % 4 == 0 and in_year % 100 != 0)or(in_year % 400 == 0):
+    return(in_year % 4 == 0 and in_year % 100 != 0)or(in_year % 400 == 0)
 
 # Another way to do it:
 # def checkLeapYear(in_year):
