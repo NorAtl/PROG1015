@@ -30,21 +30,9 @@ def main():
     #output the guest list
     print('\nThe Guest List for your party is: \n')
 
-
     for guest in guestList:
         print(guest)
-
-
-
-
-
-
-
-  
-
-
-
-  
+ 
 
 if __name__ == "__main__":
     main()
