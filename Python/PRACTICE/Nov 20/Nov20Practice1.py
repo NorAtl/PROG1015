@@ -13,13 +13,7 @@ def main():
     #writing to file
     myFile.write('Hi there!\n')
     myFile.write('How are you?\n')
-    myFile.write("I'm fine. thank you!"\n)
-
-
-
-
-
-
+    myFile.write("I'm fine. thank you!\n")
 
     # close the file handle
     myFile.close()
