@@ -10,9 +10,10 @@ def main():
 
     # initilize guest_name variable
     guest_name = ""
-    # initilize guest_age variable
-    guest_age_string = ""
-    guest_age_numeric = 0
+    # initilize age numeric variable 
+    guest_age = 0
+    # initialize age string variable to hold user input
+    guest_age_string =""
 
     # create a loop to repeat name input until user enters 'done'
     while guest_name.lower() != 'done':
@@ -20,28 +21,31 @@ def main():
         guest_name = input("Enter the name of the guest (or 'done' to finish): ")        
         
         #if statement to avoid adding 'done' to the list        
-        if guest_name.lower() != 'done':
-            # getting the guest age entered by the user
+        if guest_name.lower() != 'done':            
+
+            # adding the current guest name to the list
+            guests_name_list.append(guest_name)
             
             while not guest_age_string.isdigit():
-                guest_age_string = (input("Enter guest's age: "))
-            # adding the current guest name to the list
-
+                # getting the guest age entered by the user
+                guest_age_string = input("Enter guest's age: ")
+                # catch exceptions
                 try:
-                    guest_age_numeric = int(guest_age_string)
-                    guests_name_list.append(guest_name)
+                    guest_age = int(guest_age_string)                
                     # adding the current guest age to the list
-                    guests_age_list.append(guest_age_numeric)
-                    
+                    guests_age_list.append(guest_age)
                 except ValueError:
-                    print("Please enter a valid age")
+                    print("Invalid age. Please enter a number.")
+            
+            # reset variable after a valid input
             guest_age_string = ""
             
-    file_name = "party_guests_list.csv"
+
+    file_name = "party_guests_list?.csv"
     access_mode = 'w'
 
-    # creating a file
     try:
+        # creating a file
         partyGuestsFile = open(file_name, access_mode)
 
         # for loop to go through list and add guests to file
@@ -50,10 +54,10 @@ def main():
 
         # close the file
         partyGuestsFile.close()
-
-    # Exception is used when you want to check for any exception
     except Exception as e:
-        print(f"There was an error: {e}") # This prints what error was generated
+        print(f"An error occured while writing to the file. \nError: {e}")
+    else:
+        print("Guests saved to the list file...")
 
 if __name__ == "__main__":
     main()
