@@ -20,14 +20,6 @@ def main():
             print(f"{row[0]}\t{row[1]}")
             
 
-
-
-
-
-
-
-
-
     
 
 if __name__ == "__main__":
