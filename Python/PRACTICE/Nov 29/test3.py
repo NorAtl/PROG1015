@@ -12,8 +12,16 @@ def choose_option(options, category):
             pass
 
 def main():
-    with open("P2 - Aardvark/the_choices_file.csv", "r") as my_csv_file:
-        lines = list(csv.reader(my_csv_file))
+    
+    
+    anAnimalName = [an animal name,aardvark,hippo,duck,pelican,t-rex]
+    anActionWord = [an action word ending in 'ed',jumped,flipped,looked,added,squashed]
+    anAdjective = [an adjective,impressive,slimy,silly,frozen,magical]
+    anotherActionWord = [another action word ending in 'ed',exploded,scattered,flapped,snooped,poked]
+    aNoun = [a noun,president,pastry chef,karate,beer mug,tank]
+    yetAnotherActionWord = [another action word ending in 'ed',messed,smacked,tripped,danced,slurped]
+    anAdverb = [an adverb,dreadfully,happily,stupidly,awkwardly,beautifully]
+    
 
     categories = ["an animal name", "an action word", "an adjective", "another action word", "a noun", "yet another action word", "an adverb"]
     choices = {}
