@@ -1,5 +1,5 @@
 def main():
-    file_name = "message.txt"
+    file_name = "myFile.txt"
     access_mode = "r"
     file_handle = open(file_name, access_mode)
 
